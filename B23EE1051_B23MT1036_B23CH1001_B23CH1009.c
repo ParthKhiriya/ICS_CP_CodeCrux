@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define FILENAME "C:/C Tutorial/userdata.txt"
+#define FILENAME "https://github.com/ParthKhiriya/ICS_CP_CodeCrux/blob/main/userdata.txt"
 
 struct User {
     int pin;
