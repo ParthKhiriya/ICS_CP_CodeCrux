@@ -1,6 +1,7 @@
 # ICS_CP_CodeCrux
 
 This C program simulates ATM transactions, including balance checking, cash withdrawal, and cash deposition.
+First you have to download the C file along with the text file and then describe the appropriate path for text file and then run the program otherwise it will not work and will show error in opening the file.
 
 ## Getting Started
 
