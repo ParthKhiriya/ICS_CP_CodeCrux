@@ -6,7 +6,7 @@ This C program simulates ATM transactions, including balance checking, cash with
 
 ### Prerequisites
 Before running the program, ensure that you have a C compiler installed on your system.
-
+Please check the "userdata.txt" file to know the correct PINs so that you can run the program by those PINs.
 ### Initial Setup
 
 1. Clone the repository to your local machine.
