@@ -1,11 +1,9 @@
-// You have to download this C file in your PC along with the text file along with the text file and describe the correct path otherwise it will show error in running the file
 // Group Name : CodeCrux
 // Members : Parth Khiriya(B23EE1051) , Sambhav Jha(B23MT1036) , Arush Aaron John(B23CH1009) , Abhyudaya Tiwari(B23CH1001) 
 
 #include <stdio.h>
 #include <stdlib.h>
-#define FILENAME "userdata.txt"  
-// You have to define the path of your file here.
+#define FILENAME "userdata.txt"
 
 struct User {
     int pin;
