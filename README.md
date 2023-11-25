@@ -8,22 +8,23 @@ This C program simulates ATM transactions, including balance checking, cash with
 Before running the program, ensure that you have a C compiler installed on your system.
 
 ### Initial Setup
+
 1. Clone the repository to your local machine.
 
     bash
-    git clone https://github.com/your-username/atm-transactions.git
+    git clone https://github.com/ParthKhiriya/ICS_CP_CodeCrux.git
     
 
 2. Navigate to the project directory.
 
     bash
-    cd atm-transactions
+    cd ICS_CP_CodeCrux
     
 
 3. Compile the program.
 
     bash
-    gcc atm.c -o atm
+    gcc B23EE1051_B23MT1036_B23CH1001_B23CH1009.c -o atm
     
 
 ## Usage
@@ -53,6 +54,3 @@ Before running the program, ensure that you have a C compiler installed on your 
 
 If you would like to contribute to this project, please fork the repository and create a pull request. Your contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
