@@ -1,5 +1,6 @@
 // Group Name : CodeCrux
 // Members : Parth Khiriya(B23EE1051) , Sambhav Jha(B23MT1036) , Arush Aaron John(B23CH1009) , Abhyudaya Tiwari(B23CH1001) 
+// To know about the correct PINs, please check the "userdata.txt" file to know that which PINs are correct.
 
 #include <stdio.h>
 #include <stdlib.h>
