@@ -30,7 +30,14 @@ struct User {
     int pin;
     int balance;
 };
-
+int numof(int a){
+   int d=0;
+    while(a>0){
+        d++;
+        a=a/10;
+    }
+    return d+1;
+}
 void updateUserBalance(int pin, int updatebal) {
     FILE *file;
     file = fopen(FILENAME, "r+");
@@ -39,8 +46,9 @@ void updateUserBalance(int pin, int updatebal) {
     if (file != NULL) {
         while (fscanf(file, "%d,%d", &tempPin, &tempBalance) == 2) {
             if (tempPin == pin) {
-                fseek(file, -sizeof(int) - 1, SEEK_CUR); // Move back to the start of the line
-                fprintf(file, "%d", updatebal); // Update balance
+
+                fseek(file, -sizeof(int)- numof(tempBalance), SEEK_CUR); // Move back to the start of the line
+                fprintf(file, "%d,%d",tempPin ,updatebal); // Update balance
                 fclose(file);
                 return;   
             }
