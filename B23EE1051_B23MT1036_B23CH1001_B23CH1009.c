@@ -4,8 +4,28 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define FILENAME "userdata.txt"
+#define FILENAME "C:/C Tutorial/userdata.txt"
 
+void printATM() {
+    printf("             _______    __  __  \n");
+    printf("     /\\     |__   __|  |  \\/  |\n");
+    printf("    /  \\       | |     | \\  / |\n");
+    printf("   / /\\ \\      | |     | |\\/| |\n");
+    printf("  / ____ \\     | |     | |  | |\n");
+    printf(" /_/    \\_\\    |_|     |_|  |_|\n");
+    printf("                               \n");
+    printf("\n");
+}
+void end(){
+    printf(" _______ _                 _           __                   _     _ _   _              \n");
+    printf("|__   __| |               | |         / _|                 (_)   (_) | (_)             \n");
+    printf("   | |  | |__   __ _ _ __ | | _____  | |_ ___  _ __  __   ___ ___ _| |_ _ _ __   __ _  \n");
+    printf("   | |  | '_ \\ / _` | '_ \\| |/ / __| |  _/ _ \\| '__| \\ \\ / / / __| | __| | '_ \\ / _` | \n");
+    printf("   | |  | | | | (_| | | | |   <\\__ \\ | || (_) | |     \\ V /| \\__ \\ | |_| | | | | (_| | \n");
+    printf("   |_|  |_| |_|\\__,_|_| |_|_|\\_\\___/ |_| \\___/|_|      \\_/ |_|___/_|\\__|_|_| |_|\\__, | \n");
+    printf("                                                                                  __/ | \n");
+    printf("                                                                                 |___/  \n");
+}
 struct User {
     int pin;
     int balance;
@@ -22,7 +42,7 @@ void updateUserBalance(int pin, int updatebal) {
                 fseek(file, -sizeof(int) - 1, SEEK_CUR); // Move back to the start of the line
                 fprintf(file, "%d", updatebal); // Update balance
                 fclose(file);
-                return;
+                return;   
             }
         }
 
@@ -31,12 +51,13 @@ void updateUserBalance(int pin, int updatebal) {
     } else {
         printf("Error opening file.\n");
     }
-}
+} 
 
 
 int main() {
     int pin, amount;
-    struct User currentUser;
+    struct User currentUser;  
+    printATM();
 
     printf("Enter your PIN: ");
     scanf("%d", &pin);
@@ -69,13 +90,16 @@ int main() {
 
             int choice;
             while (1) {
-                printf("1) Check Balance\n");
-                printf("2) Withdraw Cash\n");
-                printf("3) Deposit Cash\n");
-                printf("4) Exit\n");
-                printf("Enter your choice: ");
+                printf("*<__________ATM__________>*\n");
+                printf("|  1) Check Balance      |\n");
+                printf("|  2) Withdraw Cash      |\n");
+                printf("|  3) Deposit Cash       |\n");
+                printf("|  4) Exit               |\n");
+                printf("|   Enter your choice:   ");
+                
 
                 scanf("%d", &choice);
+                printf("|________________________|");
                 system("cls"); 
 
                 switch (choice) {
@@ -110,7 +134,8 @@ int main() {
                         break;
 
                     case 4:
-                        printf("Thank you for visiting.\n");
+                        //printf("Thank you for visiting.\n");
+                        end();
                         return 0;
 
                     default:
