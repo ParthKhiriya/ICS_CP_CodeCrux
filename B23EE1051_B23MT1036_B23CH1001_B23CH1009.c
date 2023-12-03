@@ -23,7 +23,7 @@ void end(){
     printf("   | |  | '_ \\ / _` | '_ \\| |/ / __| |  _/ _ \\| '__| \\ \\ / / / __| | __| | '_ \\ / _` | \n");
     printf("   | |  | | | | (_| | | | |   <\\__ \\ | || (_) | |     \\ V /| \\__ \\ | |_| | | | | (_| | \n");
     printf("   |_|  |_| |_|\\__,_|_| |_|_|\\_\\___/ |_| \\___/|_|      \\_/ |_|___/_|\\__|_|_| |_|\\__, | \n");
-    printf("                                                                                  __/ | \n");
+    printf("                                                                                  __/| \n");
     printf("                                                                                 |___/  \n");
 }
 struct User {
@@ -47,7 +47,7 @@ void updateUserBalance(int pin, int updatebal) {
         while (fscanf(file, "%d,%d", &tempPin, &tempBalance) == 2) {
             if (tempPin == pin) {
 
-                fseek(file, -sizeof(int)- numof(tempBalance), SEEK_CUR); // Move back to the start of the line
+                fseek(file, -4 - numof(tempBalance), SEEK_CUR); // Move back to the start of the line
                 fprintf(file, "%d,%d",tempPin ,updatebal); // Update balance
                 fclose(file);
                 return;   
